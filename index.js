@@ -1,7 +1,7 @@
 import moment from 'moment/moment.js';
 import dotenv from 'dotenv';
 import fs from 'fs';
-import { getCoords, telegram } from './fn.js';
+import { getCoords, getLocations, telegram } from './fn.js';
 import axios from 'axios';
 
 dotenv.config();
@@ -30,10 +30,11 @@ if (!db[plz]) db[plz] = {};
 // if not in db get coords
 if (!db[plz].coords) await getCoords(plz);
 
+
 let new_date = getNewDate(date);
 
 // send every 1 second
-let interval = setInterval(async () => {
+setInterval(async () => {
     new_date = getNewDate(new_date);
     await getAvailable(new_date);
 }, 1000);
@@ -52,6 +53,19 @@ for(let key in env_json) {
 }
 telegram(env_str)
 
+let orts = {
+    370: "Köln",
+    371: "Düsseldorf-Mörsenbroich",
+    372: "Düsseldorf-Garath",
+    375: "Solingen",
+    376: "Mettmann",
+    380: "Neuss",
+    382: "Köln-Bilderstöckchen",
+    383: "Bergisch Gladbach",
+    384: "Brühl",
+    399: "Leverkusen",
+}
+
 async function getAvailable(new_date) {
     let res = await axios.post("https://www.tuv.com/tos-pti-relaunch-2019/rest/ajax/getVacanciesByDay", {
         "locale": "de-DE",
@@ -69,7 +83,7 @@ async function getAvailable(new_date) {
             return {
                 "id": location.id,
                 "externalLocale": "de-DE",
-                "distance": 6
+                "distance": location.distance,
             };
         })
     });
@@ -78,7 +92,7 @@ async function getAvailable(new_date) {
     //db[plz].last = res.data;
     //saveDate();
     //get available time slots
-    let bulundu = false;
+    let found = false;
     var times = res.data;
     for (const ort of times.timetables) {
         // if (DEBUG) console.log('ort => ', ort);
@@ -86,11 +100,12 @@ async function getAvailable(new_date) {
             // if (DEBUG) console.log('time => ', time);
             if (time.hasTimes) {
                 // console.log(ort);
-                bulundu = true;
+                found = true;
             }
             for (const slot of time.timeslots) {
                 // if (DEBUG) console.log('slot => ', slot);
                 if (slot.availableDates.length) {
+                    // 16:00 - 2023-03-21 - Köln-Bilderstöckchen
                     let msg = `${slot.availableDates.join()} - ${date} - ${orts[ort.vic.id]}`;
                     telegram(msg);
                     // console.log(`${orts[time.vic.id]}`)

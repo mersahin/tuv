@@ -1,4 +1,156 @@
 {
+  "40477": {
+    "coords": {
+      "lat": "51.23875085",
+      "lon": "6.7854134473711305"
+    },
+    "locations": [
+      {
+        "campaigns": [],
+        "events": [],
+        "location": {
+          "latitude": 51.255042,
+          "longitude": 6.802365
+        },
+        "vehicleServices": [],
+        "vehicleTypes": [],
+        "id": 371,
+        "name": "Düsseldorf-Mörsenbroich (Theorie)",
+        "street": "Vogelsanger Weg 6",
+        "zip": "40470",
+        "city": "Düsseldorf-Mörsenbroich",
+        "phone": " ",
+        "distance": 2,
+        "openingHours": [],
+        "openingMessages": [],
+        "messages": [],
+        "isOnlineTerminable": true,
+        "externalLocale": "de-DE",
+        "isExternal": false,
+        "uid": "371-de-DE"
+      },
+      {
+        "campaigns": [],
+        "events": [],
+        "location": {
+          "latitude": 51.20094,
+          "longitude": 6.708053
+        },
+        "vehicleServices": [],
+        "vehicleTypes": [],
+        "id": 380,
+        "name": "Neuss (Theorie)",
+        "street": "Derendorfweg 6",
+        "zip": "41460",
+        "city": "Neuss",
+        "phone": " ",
+        "distance": 7,
+        "openingHours": [],
+        "openingMessages": [],
+        "messages": [],
+        "isOnlineTerminable": true,
+        "externalLocale": "de-DE",
+        "isExternal": false,
+        "uid": "380-de-DE"
+      },
+      {
+        "campaigns": [],
+        "events": [],
+        "location": {
+          "latitude": 51.253546,
+          "longitude": 6.95266
+        },
+        "vehicleServices": [],
+        "vehicleTypes": [],
+        "id": 376,
+        "name": "Mettmann (Theorie)",
+        "street": "Rudolf-Diesel-Str. 9",
+        "zip": "40822",
+        "city": "Mettmann",
+        "phone": " ",
+        "distance": 12,
+        "openingHours": [],
+        "openingMessages": [],
+        "messages": [],
+        "isOnlineTerminable": true,
+        "externalLocale": "de-DE",
+        "isExternal": false,
+        "uid": "376-de-DE"
+      },
+      {
+        "campaigns": [],
+        "events": [],
+        "location": {
+          "latitude": 51.148356,
+          "longitude": 6.89511
+        },
+        "vehicleServices": [],
+        "vehicleTypes": [],
+        "id": 372,
+        "name": "Düsseldorf-Garath (Theorie)",
+        "street": "Frankfurter Str. 201",
+        "zip": "40595",
+        "city": "Düsseldorf-Garath",
+        "phone": " ",
+        "distance": 13,
+        "openingHours": [],
+        "openingMessages": [],
+        "messages": [],
+        "isOnlineTerminable": true,
+        "externalLocale": "de-DE",
+        "isExternal": false,
+        "uid": "372-de-DE"
+      },
+      {
+        "campaigns": [],
+        "events": [],
+        "location": {
+          "latitude": 51.356744,
+          "longitude": 6.616796
+        },
+        "vehicleServices": [],
+        "vehicleTypes": [],
+        "id": 381,
+        "name": "Krefeld (Theorie)",
+        "street": "Elbestr. 9",
+        "zip": "47800",
+        "city": "Krefeld",
+        "phone": " ",
+        "distance": 18,
+        "openingHours": [],
+        "openingMessages": [],
+        "messages": [],
+        "isOnlineTerminable": true,
+        "externalLocale": "de-DE",
+        "isExternal": false,
+        "uid": "381-de-DE"
+      },
+      {
+        "campaigns": [],
+        "events": [],
+        "location": {
+          "latitude": 51.158768,
+          "longitude": 7.030101
+        },
+        "vehicleServices": [],
+        "vehicleTypes": [],
+        "id": 375,
+        "name": "Solingen (Theorie)",
+        "street": "Schorberger Str. 71",
+        "zip": "42699",
+        "city": "Solingen",
+        "phone": " ",
+        "distance": 19,
+        "openingHours": [],
+        "openingMessages": [],
+        "messages": [],
+        "isOnlineTerminable": true,
+        "externalLocale": "de-DE",
+        "isExternal": false,
+        "uid": "375-de-DE"
+      }
+    ]
+  },
   "40789": {
     "coords": {
       "lat": "51.0981435",
@@ -3355,6 +3507,5 @@
         "uid": "384-de-DE"
       }
     ]
-  },
-  "date": "2023-04-08"
+  }
 }

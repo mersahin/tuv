@@ -8,7 +8,7 @@ export const saveDate = () => {
 }
 
 export const telegram = function(message) {
-    var token = env.TELEGRAM_API_KEY;;
+    var token = env.TELEGRAM_API_KEY;
     var chat_id = env.TELEGRAM_CHAT_ID;
 
     console.log(message)
@@ -59,6 +59,7 @@ export const getLocations = function (coords) {
             "id": 44
         }
     };
+
     axios.post(url, data).then((response) => {
         if (DEBUG)
             console.log(response.data);
