@@ -59,7 +59,7 @@ for(let key in env_json) {
     // telegram html new line
     env_str += key + ": " + env_json[key] + "\n"
 }
-// telegram(env_str)
+telegram(env_str)
 
 let orts = {
     370: "Köln",
