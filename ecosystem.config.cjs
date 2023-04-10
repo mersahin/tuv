@@ -105,7 +105,7 @@ module.exports = {
       repo : 'https://github.com/mersahin/tuv',
       path : '/root/tuv',
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.cjs',
+      'post-deploy' : 'npm install && pm2 reload /root/tuv/ecosystem.config.cjs',
       'pre-setup': ''
     }
   },   
