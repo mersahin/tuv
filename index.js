@@ -30,14 +30,22 @@ if (!db[plz]) db[plz] = {};
 // if not in db get coords
 if (!db[plz].coords) await getCoords(plz);
 
-
 let new_date = getNewDate(date);
 
 // send every 1 second
 setInterval(async () => {
-    new_date = getNewDate(new_date);
-    await getAvailable(new_date);
-}, 1000);
+    // jeder 2 mal
+    if (Math.floor(Math.random() * 2) == 0) {
+        axios.get(`${env.HEALTH_CHECKS}`);
+    }
+
+    try {
+        new_date = getNewDate(new_date);
+        await getAvailable(new_date);
+    } catch (error) {
+        console.log(error);
+    }
+}, 10000);
 
 // fetch data axios
 // await getAvailable();
@@ -51,7 +59,7 @@ for(let key in env_json) {
     // telegram html new line
     env_str += key + ": " + env_json[key] + "\n"
 }
-telegram(env_str)
+// telegram(env_str)
 
 let orts = {
     370: "Köln",
@@ -106,7 +114,8 @@ async function getAvailable(new_date) {
                 // if (DEBUG) console.log('slot => ', slot);
                 if (slot.availableDates.length) {
                     // 16:00 - 2023-03-21 - Köln-Bilderstöckchen
-                    let msg = `${slot.availableDates.join()} - ${date} - ${orts[ort.vic.id]}`;
+                    let gefundene_ort = db[plz].locations.find((location) => location.id == ort.vic.id).name;
+                    let msg = `${slot.availableDates.join()} - ${date} - ${gefundene_ort}`;
                     telegram(msg);
                     // console.log(`${orts[time.vic.id]}`)
                 }
@@ -132,7 +141,7 @@ function  getNewDate(date) {
             break;
     }
 
-    if (DEBUG) console.log(new_date)
+    // if (DEBUG) console.log(new_date)
     return new_date;
 }
 
