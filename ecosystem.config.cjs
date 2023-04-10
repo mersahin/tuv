@@ -6,7 +6,6 @@ module.exports = {
     ignore_watch: [ "node_modules", "db.json", ".git/FETCH_HEAD"],    
     env: {
       "PLZ":"40789",
-      "TELEGRAM_API_KEY":"6180248213:AAHzFUCEi4mLoubr3rZim1PUQ2XsEovh9iU",
       "DEBUG":1,
       "TELEGRAM_CHAT_ID":"-978962376",
       "START_DATE":"",
@@ -38,7 +37,6 @@ module.exports = {
     ignore_watch: [ "node_modules", "db.json", ".git/FETCH_HEAD"],    
     env: {
       "PLZ":"40477",
-      "TELEGRAM_API_KEY":"6180248213:AAHzFUCEi4mLoubr3rZim1PUQ2XsEovh9iU",
       "DEBUG":1,
       "TELEGRAM_CHAT_ID":"-839291817",
       "START_DATE":"",
@@ -70,7 +68,6 @@ module.exports = {
     ignore_watch: [ "node_modules", "db.json", ".git/FETCH_HEAD"],    
     env: {
       "PLZ":"51061",
-      "TELEGRAM_API_KEY":"6180248213:AAHzFUCEi4mLoubr3rZim1PUQ2XsEovh9iU",
       "DEBUG":1,
       "TELEGRAM_CHAT_ID":"-922114497",
       "START_DATE":"",
