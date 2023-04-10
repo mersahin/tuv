@@ -141,7 +141,7 @@ function  getNewDate(date) {
             break;
     }
 
-    // if (DEBUG) console.log(new_date)
+    if (DEBUG) console.log(new_date)
     return new_date;
 }
 
