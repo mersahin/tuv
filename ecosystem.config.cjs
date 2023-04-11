@@ -30,37 +30,37 @@ module.exports = {
     // log date format
     log_date_format: 'YYYY-MM-DD HH:mm Z'
   }, 
-  {
-    name: 'tuv_duesseldorf',
-    script: 'yarn start',
-    watch: '*.js',
-    ignore_watch: [ "node_modules", "db.json", ".git/FETCH_HEAD"],    
-    env: {
-      "PLZ":"40477",
-      "DEBUG":1,
-      "TELEGRAM_CHAT_ID":"-839291817",
-      "START_DATE":"",
-      "END_DATE":"2023-04-28",
-      "TYPE":"incremental",
-      "CUSTOM_DATES":"",
-      "HEALTH_CHECKS":"https://hc-ping.com/64896b33-1330-4602-9699-f686f5abcf36"
-    },
-    instances: 1,
-    // auto start
-    autorestart: true,
-    // restart delay
-    restart_delay: 10000,
-    // max restarts
-    max_restarts: 10,
-    // max memory
-    max_memory_restart: '1G',
-    // log file
-    out_file: '/var/log/tuv_duesseldorf.log',
-    // error file
-    error_file: '/var/log/tuv_duesseldorf.err',
-    // log date format
-    log_date_format: 'YYYY-MM-DD HH:mm Z'
-  },
+  // {
+  //   name: 'tuv_duesseldorf',
+  //   script: 'yarn start',
+  //   watch: '*.js',
+  //   ignore_watch: [ "node_modules", "db.json", ".git/FETCH_HEAD"],    
+  //   env: {
+  //     "PLZ":"40477",
+  //     "DEBUG":1,
+  //     "TELEGRAM_CHAT_ID":"-839291817",
+  //     "START_DATE":"",
+  //     "END_DATE":"2023-04-28",
+  //     "TYPE":"incremental",
+  //     "CUSTOM_DATES":"",
+  //     "HEALTH_CHECKS":"https://hc-ping.com/64896b33-1330-4602-9699-f686f5abcf36"
+  //   },
+  //   instances: 1,
+  //   // auto start
+  //   autorestart: true,
+  //   // restart delay
+  //   restart_delay: 10000,
+  //   // max restarts
+  //   max_restarts: 10,
+  //   // max memory
+  //   max_memory_restart: '1G',
+  //   // log file
+  //   out_file: '/var/log/tuv_duesseldorf.log',
+  //   // error file
+  //   error_file: '/var/log/tuv_duesseldorf.err',
+  //   // log date format
+  //   log_date_format: 'YYYY-MM-DD HH:mm Z'
+  // },
   {
     name: 'tuv_koln',
     script: 'yarn start',
