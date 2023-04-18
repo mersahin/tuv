@@ -115,7 +115,7 @@ async function getAvailable(new_date) {
                 if (slot.availableDates.length) {
                     // 16:00 - 2023-03-21 - Köln-Bilderstöckchen
                     let gefundene_ort = db[plz].locations.find((location) => location.id == ort.vic.id).name;
-                    let msg = `${slot.availableDates.join()} - ${date} - ${gefundene_ort}`;
+                    let msg = `${slot.availableDates.join()} - ${new_date} - ${gefundene_ort}`;
                     telegram(msg);
                     // console.log(`${orts[time.vic.id]}`)
                 }
