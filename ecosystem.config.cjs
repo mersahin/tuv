@@ -9,7 +9,7 @@ module.exports = {
       "DEBUG":1,
       "TELEGRAM_CHAT_ID":"-978962376",
       "START_DATE":"",
-      "END_DATE":"2023-04-28",
+      "END_DATE":"2023-05-15",
       "TYPE":"incremental",
       "CUSTOM_DATES":"",
       "HEALTH_CHECKS":"https://hc-ping.com/6c909dd1-96f9-4d95-bc1e-a1f9e9a74666"
@@ -71,9 +71,9 @@ module.exports = {
       "DEBUG":1,
       "TELEGRAM_CHAT_ID":"-922114497",
       "START_DATE":"",
-      "END_DATE":"",
+      "END_DATE":"2023-05-20",
       "TYPE":"custom_date",
-      "CUSTOM_DATES":"2023-04-21,2023-04-28",
+      "CUSTOM_DATES":"",
       "HEALTH_CHECKS":"https://hc-ping.com/9bdb8c20-3a64-497d-96f1-6a140076a728"
     },
     instances: 1,
