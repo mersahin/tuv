@@ -6,7 +6,7 @@ import axios from 'axios';
 
 dotenv.config();
 // load .env.40789
-dotenv.config({ path: '.env.' + process.env.PLZ });
+dotenv.config({ path: '.env.' + process.env.PLZ ?? "40789" });
 //read db
 export let db = JSON.parse(fs.readFileSync('./db.json', 'utf8'));
 
